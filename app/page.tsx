@@ -3,12 +3,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { Github, Linkedin, Instagram, Mail, ExternalLink, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CursorSpotlight } from '@/components/cursor-spotlight'
 import { useActiveSection } from '@/hooks/use-active-section'
 import { cn } from "@/lib/utils"
 import { useState } from 'react'
+import Image from 'next/image'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -43,7 +43,7 @@ export default function Portfolio() {
           <div>
             <h2 className="text-5xl font-bold text-red-500 tracking-tight mb-4">Shahrul Hafiz</h2>
             <p className="text-[#a1a1aa] text-lg font-light mb-16 leading-relaxed">
-            I'm a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
+            I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
             </p>
             <nav className="space-y-5">
               {navItems.map((item) => {
@@ -103,7 +103,7 @@ export default function Portfolio() {
             variants={fadeIn}
             className="text-base text-[#a1a1aa] max-w-2xl leading-relaxed"
           >
-            Hey there! 👋 I'm a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I'm all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I've built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects! 💻 My go-to languages are Python, R, Java, plus web basics like HTML, CSS, and JavaScript. I'm always contributing to open-source projects 🧑‍💻. I've earned some cool awards🏅, a scholarship 💰, coding badges 🏆, and even made the Dean's List! 🤓 I'm constantly learning and looking for exciting projects to jump into! Let's build something awesome! ✨
+            Hey there! 👋 I&apos;m a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I&apos;m all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I&apos;ve built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects! 💻 My go-to languages are Python, R, Java, plus web basics like HTML, CSS, and JavaScript. I&apos;m always contributing to open-source projects 🧑‍💻. I&apos;ve earned some cool awards🏅, a scholarship 💰, coding badges 🏆, and even made the Dean&apos;s List! 🤓 I&apos;m constantly learning and looking for exciting projects to jump into! Let&apos;s build something awesome! ✨
           </motion.p>
         </motion.section>
 
@@ -232,11 +232,13 @@ export default function Portfolio() {
                 <div className="group p-8 flex gap-6">
                   {project.image && (
                     <div className="relative w-48 h-32 flex-shrink-0 group/image cursor-pointer">
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
                         onClick={() => setSelectedImage(project.image)}
                         className="w-full h-full object-cover object-center rounded-md transition-transform duration-300 group-hover/image:scale-105"
+                        width={192}
+                        height={128}
                       />
                     </div>
                   )}
@@ -329,7 +331,7 @@ export default function Portfolio() {
             className="max-w-2xl"
           >
             <p className="text-[#a1a1aa] text-lg mb-8 leading-relaxed">
-              I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+              I&apos;m always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
             </p>
             <a 
               href="mailto:hafizcr716@gmail.com"
@@ -371,10 +373,12 @@ export default function Portfolio() {
               >
                 <X className="h-8 w-8" />
               </button>
-              <img
+              <Image
                 src={selectedImage}
                 alt="Full size"
                 className="w-full h-auto rounded-lg shadow-2xl"
+                width={1024}
+                height={768}
               />
             </motion.div>
           </motion.div>
