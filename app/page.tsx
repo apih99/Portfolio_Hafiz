@@ -34,35 +34,18 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-black via-black to-[#0a192f] text-white">
       <CursorSpotlight />
       {/* Navigation - Header on mobile, Sidebar on desktop */}
-      <nav className={cn(
-        "w-full md:fixed md:left-0 md:top-0 md:h-screen md:w-[45%] bg-gradient-to-br from-black via-black to-[#0a192f]",
-        "md:bg-gradient-to-br md:from-black/10 md:via-black/10 md:to-[#0a192f]/10 md:backdrop-blur-[2px] md:z-50"
-      )}>
+      <nav className="fixed top-0 w-full md:w-[45%] md:h-screen bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] z-50">
         <motion.div 
           initial={{ x: -100 }}
           animate={{ x: 0 }}
-          className="p-8 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
+          className="p-6 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
         >
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-red-500 tracking-tight mb-2">Shahrul Hafiz</h2>
-            <h3 className="text-xl text-[#a1a1aa] mb-4 md:hidden">Data Developer</h3>
-            <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-6 md:mb-16 leading-relaxed">
-              I build accessible, pixel-perfect digital experiences for the web.
+            <h2 className="text-2xl md:text-5xl font-bold text-red-500 tracking-tight mb-2 md:mb-4">Shahrul Hafiz</h2>
+            <p className="hidden md:block text-[#a1a1aa] text-base md:text-lg font-light mb-8 md:mb-16 leading-relaxed">
+              I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
             </p>
-            <div className="flex gap-4 mb-8 md:hidden">
-              {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#a1a1aa] hover:text-red-500 transition-colors"
-                >
-                  <Icon className="h-6 w-6" />
-                </a>
-              ))}
-            </div>
-            <nav className="hidden md:block md:space-y-5">
+            <nav className="flex md:block space-x-4 md:space-x-0 md:space-y-5 overflow-x-auto pb-2 md:pb-0">
               {navItems.map((item) => {
                 const isActive = activeSection === item.toLowerCase()
                 return (
@@ -70,12 +53,12 @@ export default function Portfolio() {
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     className={cn(
-                      "group flex items-center gap-4 text-base text-[#a1a1aa] hover:text-red-500 transition-all",
+                      "group flex items-center gap-2 md:gap-4 text-sm md:text-base whitespace-nowrap text-[#a1a1aa] hover:text-red-500 transition-all",
                       isActive && "text-red-500"
                     )}
                   >
                     <span className={cn(
-                      "h-px w-4 bg-[#a1a1aa] transition-all duration-300 group-hover:w-8 group-hover:bg-red-500",
+                      "hidden md:block h-px w-4 bg-[#a1a1aa] transition-all duration-300 group-hover:w-8 group-hover:bg-red-500",
                       isActive && "w-12 bg-red-500"
                     )} />
                     {item}
@@ -89,8 +72,8 @@ export default function Portfolio() {
               <a
                 key={i}
                 href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
-                target="_blank"
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                 className="text-[#a1a1aa] hover:text-red-500 transition-colors"
               >
                 <Icon className="h-5 w-5" />
@@ -101,7 +84,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main className="md:ml-[45%] px-8 md:px-16 md:pt-24">
+      <main className="pt-24 md:pt-24 px-6 md:px-16 md:ml-[45%] max-w-[1200px]">
         {/* Hero Section */}
         <motion.section
           initial="initial"
