@@ -31,39 +31,43 @@ export default function Portfolio() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-black to-[#0a192f] text-white">
+    <div className="min-h-screen bg-[#0a192f] text-white">
       <CursorSpotlight />
-      {/* Navigation - Header on mobile, Sidebar on desktop */}
-      <nav className="fixed top-0 w-full md:w-[45%] md:h-screen bg-[#0a192f] md:bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] z-50">
-        <motion.div 
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          className="p-8 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
-        >
-          <div>
-            <div className="flex flex-col gap-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Shahrul Hafiz</h2>
-              <h3 className="text-xl md:hidden text-[#a1a1aa]">Data Developer</h3>
-              <p className="text-[#a1a1aa] text-base leading-relaxed">
-                I build accessible, pixel-perfect digital experiences for the web.
-              </p>
-              <div className="flex md:hidden gap-6 pt-4">
-                {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#a1a1aa] hover:text-red-500 transition-colors"
-                  >
-                    <Icon className="h-6 w-6" />
-                  </a>
-                ))}
-              </div>
-            </div>
-            
-            <div className="hidden md:block">
-              <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-8 md:mb-16 leading-relaxed mt-8">
+      
+      {/* Main Content */}
+      <main className="px-6 md:px-16 md:ml-[45%] max-w-[1200px]">
+        {/* Mobile Header */}
+        <div className="block md:hidden pt-12 pb-8">
+          <h2 className="text-4xl font-bold mb-2">Shahrul Hafiz</h2>
+          <h3 className="text-2xl text-[#8892b0] mb-4">Front End Engineer</h3>
+          <p className="text-[#8892b0] text-lg mb-8">
+            I build accessible, pixel-perfect digital experiences for the web.
+          </p>
+          <div className="flex gap-6 mb-12">
+            {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
+              <a
+                key={i}
+                href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#8892b0] hover:text-red-500 transition-colors"
+              >
+                <Icon className="h-6 w-6" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Sidebar */}
+        <nav className="hidden md:block fixed left-0 top-0 h-screen w-[45%] bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px]">
+          <motion.div 
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+            className="h-full pl-32 pr-16 pt-24 flex flex-col justify-between"
+          >
+            <div>
+              <h2 className="text-5xl font-bold text-red-500 tracking-tight mb-4">Shahrul Hafiz</h2>
+              <p className="text-[#8892b0] text-lg font-light mb-16 leading-relaxed">
                 I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
               </p>
               <nav className="space-y-5">
@@ -74,12 +78,12 @@ export default function Portfolio() {
                       key={item}
                       href={`#${item.toLowerCase()}`}
                       className={cn(
-                        "group flex items-center gap-4 text-base text-[#a1a1aa] hover:text-red-500 transition-all",
+                        "group flex items-center gap-4 text-base text-[#8892b0] hover:text-red-500 transition-all",
                         isActive && "text-red-500"
                       )}
                     >
                       <span className={cn(
-                        "h-px w-4 bg-[#a1a1aa] transition-all duration-300 group-hover:w-8 group-hover:bg-red-500",
+                        "h-px w-4 bg-[#8892b0] transition-all duration-300 group-hover:w-8 group-hover:bg-red-500",
                         isActive && "w-12 bg-red-500"
                       )} />
                       {item}
@@ -88,54 +92,34 @@ export default function Portfolio() {
                 })}
               </nav>
             </div>
-          </div>
-          <div className="hidden md:flex gap-5">
-            {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
-              <a
-                key={i}
-                href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#a1a1aa] hover:text-red-500 transition-colors"
-              >
-                <Icon className="h-5 w-5" />
-              </a>
-            ))}
-          </div>
-        </motion.div>
-      </nav>
+            <div className="flex gap-5">
+              {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
+                <a
+                  key={i}
+                  href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#8892b0] hover:text-red-500 transition-colors"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        </nav>
 
-      {/* Main Content */}
-      <main className="pt-[280px] md:pt-24 px-6 md:px-16 md:ml-[45%] max-w-[1200px]">
-        {/* Hero Section */}
-        <motion.section
-          initial="initial"
+        {/* About Section */}
+        <section
           id="about"
-          animate="animate"
-          variants={staggerChildren}
-          className="min-h-[50vh] flex flex-col justify-start"
+          className="mb-24 md:mb-32"
         >
-          <motion.h1 
-            variants={fadeIn}
-            className="text-4xl md:text-7xl font-bold mb-4"
-          >
-            Data <span className="text-red-500">Developer</span>
-          </motion.h1>
-          <motion.p 
-            variants={fadeIn}
-            className="md:hidden text-[#a1a1aa] text-base font-light mb-8 leading-relaxed"
-          >
-            I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
-          </motion.p>
-          <motion.p 
-            variants={fadeIn}
-            className="text-sm md:text-base text-[#a1a1aa] max-w-2xl leading-relaxed"
-          >
-            Hey there! 👋 I&apos;m a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I&apos;m all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I&apos;ve built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects! 💻 My go-to languages are Python, R, Java, plus web basics like HTML, CSS, and JavaScript. I&apos;m always contributing to open-source projects 🧑‍💻. I&apos;ve earned some cool awards🏅, a scholarship 💰, coding badges 🏆, and even made the Dean&apos;s List! 🤓 I&apos;m constantly learning and looking for exciting projects to jump into! Let&apos;s build something awesome! ✨
-          </motion.p>
-        </motion.section>
-
-      
+          <h2 className="text-2xl font-semibold text-[#ccd6f6] mb-4">ABOUT</h2>
+          <div className="text-[#8892b0] space-y-4 text-lg">
+            <p>
+              I&apos;m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
+            </p>
+          </div>
+        </section>
 
         {/* Experience Section */}
         <motion.section
@@ -144,7 +128,7 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="py-8"
+          className="py-16 md:py-24"
         >
           <motion.h2 
             variants={fadeIn}
@@ -346,7 +330,7 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="min-h-screen py-12"
+          className="py-16 md:py-24"
         >
           <motion.h2 
             variants={fadeIn}
