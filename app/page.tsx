@@ -55,7 +55,7 @@ export default function Portfolio() {
                 </a>
               ))}
             </div>
-            <div className="hidden md:block">
+            <div className="md:block">
               <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-8 md:mb-16 leading-relaxed">
                 I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
               </p>
