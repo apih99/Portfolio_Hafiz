@@ -42,10 +42,6 @@ export default function Portfolio() {
         >
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-red-500 tracking-tight mb-2">Shahrul Hafiz</h2>
-            <h3 className="text-xl text-[#a1a1aa] mb-4">Data Developer</h3>
-            <p className="text-[#a1a1aa] text-base leading-relaxed mb-8">
-              I build accessible, data-driven solutions and digital experiences for the web.
-            </p>
             <div className="flex gap-4 mb-8 md:hidden">
               {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
                 <a
@@ -120,19 +116,11 @@ export default function Portfolio() {
           </motion.h1>
           <motion.p 
             variants={fadeIn}
-            className="md:hidden text-[#a1a1aa] text-base font-light mb-8 leading-relaxed"
-          >
-            I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
-          </motion.p>
-          <motion.p 
-            variants={fadeIn}
-            className="text-sm md:text-base text-[#a1a1aa] max-w-2xl leading-relaxed"
+            className="text-[#a1a1aa] text-base md:text-lg max-w-2xl leading-relaxed"
           >
             Hey there! 👋 I&apos;m a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I&apos;m all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I&apos;ve built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects! 💻 My go-to languages are Python, R, Java, plus web basics like HTML, CSS, and JavaScript. I&apos;m always contributing to open-source projects 🧑‍💻. I&apos;ve earned some cool awards🏅, a scholarship 💰, coding badges 🏆, and even made the Dean&apos;s List! 🤓 I&apos;m constantly learning and looking for exciting projects to jump into! Let&apos;s build something awesome! ✨
           </motion.p>
         </motion.section>
-
-      
 
         {/* Experience Section */}
         <motion.section
@@ -141,11 +129,11 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="py-8"
+          className="px-8 md:px-16 py-16 md:py-24"
         >
           <motion.h2 
             variants={fadeIn}
-            className="text-4xl font-bold mb-8"
+            className="text-3xl md:text-4xl font-bold mb-8 md:mb-12"
           >
             Experience
           </motion.h2>
@@ -211,7 +199,7 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="py-16 md:py-24"
+          className="px-8 md:px-16 py-16 md:py-24"
         >
           <motion.h2 
             variants={fadeIn}
@@ -343,7 +331,7 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="min-h-screen py-12"
+          className="px-8 md:px-16 py-16 md:py-24 min-h-[70vh]"
         >
           <motion.h2 
             variants={fadeIn}
