@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js and Tailwind CSS, featuring a clean design with interactive elements and smooth animations.
 
-First, run the development server:
+![Portfolio Preview](/public/preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌟 Features
+
+- **Responsive Design**: Seamlessly adapts to all screen sizes
+- **Interactive UI Elements**:
+  - Dynamic cursor spotlight effect
+  - Smooth scroll navigation
+  - Image modal with zoom effect
+  - Hover animations
+- **Section-Based Layout**:
+  - About: Personal introduction with emoji-rich description
+  - Experience: Timeline-based work history
+  - Projects: Featured projects with image previews
+  - Contact: Easy-to-reach section with social links
+- **Project Archive**: Dedicated page for viewing all projects
+- **Performance Optimized**: Built with Next.js for optimal loading speeds
+- **Animations**: Powered by Framer Motion for smooth transitions
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide Icons
+- **UI Components**: Custom components with shadcn/ui
+- **Typography**: Custom font optimization
+- **Deployment**: Vercel
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/portfolio-website.git
+   cd portfolio-website
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser**
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── page.tsx          # Main portfolio page
+│   ├── archive/          # Project archive page
+│   └── layout.tsx        # Root layout
+├── components/           # Reusable UI components
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+├── public/              # Static assets
+└── styles/             # Global styles
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Personal Information**: Edit the content in `app/page.tsx`
+2. **Projects**: Update the projects array in both main page and archive
+3. **Styling**: Modify the Tailwind configuration in `tailwind.config.js`
+4. **Images**: Add your project images to the `public` directory
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Environment Variables
 
-## Learn More
+Create a `.env.local` file in the root directory:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_WEBSITE_URL=your-website-url
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Responsive Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Mobile-first approach
+- Breakpoints:
+  - sm: 640px
+  - md: 768px
+  - lg: 1024px
+  - xl: 1280px
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy this portfolio is using [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to a GitHub repository
+2. Import your project to Vercel
+3. Deploy with one click
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/yourusername/portfolio-website/issues).
+
+## 📧 Contact
+
+For any questions or feedback, feel free to reach out:
+- Email: hafizcr716@gmail.com
+- LinkedIn: [Shahrul Hafiz](https://www.linkedin.com/in/shahrulhafiz03/)
+- GitHub: [@apih99](https://github.com/apih99)
