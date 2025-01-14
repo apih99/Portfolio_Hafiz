@@ -34,19 +34,22 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-black via-black to-[#0a192f] text-white">
       <CursorSpotlight />
       {/* Navigation - Header on mobile, Sidebar on desktop */}
-      <nav className="w-full md:fixed md:left-0 md:top-0 md:h-screen md:w-[45%] bg-gradient-to-br from-black via-black to-[#0a192f] md:bg-black/10 md:backdrop-blur-[2px] md:z-50">
+      <nav className={cn(
+        "w-full md:fixed md:left-0 md:top-0 md:h-screen md:w-[45%] bg-gradient-to-br from-black via-black to-[#0a192f]",
+        "md:bg-gradient-to-br md:from-black/10 md:via-black/10 md:to-[#0a192f]/10 md:backdrop-blur-[2px] md:z-50"
+      )}>
         <motion.div 
           initial={{ x: -100 }}
           animate={{ x: 0 }}
-          className="px-8 pt-16 pb-8 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
+          className="p-8 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
         >
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-red-500 tracking-tight mb-2">Shahrul Hafiz</h2>
-            <h3 className="text-xl text-[#a1a1aa] mb-2">Data Developer</h3>
-            <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-8 leading-relaxed">
-              I build accessible, data-driven solutions and digital experiences for the web.
+            <h3 className="text-xl text-[#a1a1aa] mb-4 md:hidden">Data Developer</h3>
+            <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-6 md:mb-16 leading-relaxed">
+              I build accessible, pixel-perfect digital experiences for the web.
             </p>
-            <div className="flex gap-4 mb-12">
+            <div className="flex gap-4 mb-8 md:hidden">
               {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
                 <a
                   key={i}
@@ -59,7 +62,7 @@ export default function Portfolio() {
                 </a>
               ))}
             </div>
-            <nav className="hidden md:block space-y-5">
+            <nav className="hidden md:block md:space-y-5">
               {navItems.map((item) => {
                 const isActive = activeSection === item.toLowerCase()
                 return (
@@ -81,31 +84,38 @@ export default function Portfolio() {
               })}
             </nav>
           </div>
+          <div className="hidden md:flex gap-5">
+            {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
+              <a
+                key={i}
+                href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#a1a1aa] hover:text-red-500 transition-colors"
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
         </motion.div>
       </nav>
 
       {/* Main Content */}
       <main className="md:ml-[45%] px-8 md:px-16 md:pt-24">
-        {/* About Section */}
+        {/* Hero Section */}
         <motion.section
           initial="initial"
           id="about"
           animate="animate"
           variants={staggerChildren}
-          className="min-h-[50vh] flex flex-col justify-start pt-8 md:pt-0"
+          className="min-h-[50vh] flex flex-col justify-start"
         >
-          <motion.h2 
+          <motion.h1 
             variants={fadeIn}
-            className="text-2xl font-bold mb-6 md:hidden"
+            className="text-4xl md:text-7xl font-bold mb-4"
           >
-            ABOUT
-          </motion.h2>
-          <motion.p 
-            variants={fadeIn}
-            className="text-[#a1a1aa] text-base leading-relaxed"
-          >
-            Hey there! 👋 I&apos;m a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I&apos;m all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I&apos;ve built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects!
-          </motion.p>
+            Data <span className="text-red-500">Developer</span>
+          </motion.h1>
           <motion.p 
             variants={fadeIn}
             className="md:hidden text-[#a1a1aa] text-base font-light mb-8 leading-relaxed"
