@@ -33,19 +33,19 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-black to-[#0a192f] text-white">
       <CursorSpotlight />
-      {/* Sidebar Navigation */}
-      <nav className="fixed left-0 top-0 h-screen w-full md:w-[45%] bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] p-8 md:pl-32 md:pr-16 md:pt-24">
+      {/* Navigation - Header on mobile, Sidebar on desktop */}
+      <nav className="fixed top-0 w-full md:w-[45%] md:h-screen bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] z-50">
         <motion.div 
           initial={{ x: -100 }}
           animate={{ x: 0 }}
-          className="h-full flex flex-col justify-between"
+          className="p-6 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
         >
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-red-500 tracking-tight mb-4">Shahrul Hafiz</h2>
-            <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-8 md:mb-16 leading-relaxed">
-            I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
+            <h2 className="text-2xl md:text-5xl font-bold text-red-500 tracking-tight mb-2 md:mb-4">Shahrul Hafiz</h2>
+            <p className="hidden md:block text-[#a1a1aa] text-base md:text-lg font-light mb-8 md:mb-16 leading-relaxed">
+              I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
             </p>
-            <nav className="space-y-4 md:space-y-5">
+            <nav className="flex md:block space-x-4 md:space-x-0 md:space-y-5 overflow-x-auto pb-2 md:pb-0">
               {navItems.map((item) => {
                 const isActive = activeSection === item.toLowerCase()
                 return (
@@ -53,12 +53,12 @@ export default function Portfolio() {
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     className={cn(
-                      "group flex items-center gap-4 text-base text-[#a1a1aa] hover:text-red-500 transition-all",
+                      "group flex items-center gap-2 md:gap-4 text-sm md:text-base whitespace-nowrap text-[#a1a1aa] hover:text-red-500 transition-all",
                       isActive && "text-red-500"
                     )}
                   >
                     <span className={cn(
-                      "h-px w-4 bg-[#a1a1aa] transition-all duration-300 group-hover:w-8 group-hover:bg-red-500",
+                      "hidden md:block h-px w-4 bg-[#a1a1aa] transition-all duration-300 group-hover:w-8 group-hover:bg-red-500",
                       isActive && "w-12 bg-red-500"
                     )} />
                     {item}
@@ -67,13 +67,13 @@ export default function Portfolio() {
               })}
             </nav>
           </div>
-          <div className="flex gap-5">
+          <div className="hidden md:flex gap-5">
             {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
               <a
                 key={i}
                 href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
                 target="_blank"
-                            rel="noopener noreferrer"
+                rel="noopener noreferrer"
                 className="text-[#a1a1aa] hover:text-red-500 transition-colors"
               >
                 <Icon className="h-5 w-5" />
@@ -84,7 +84,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-[450px] md:pt-24 px-8 md:px-16 md:ml-[45%] max-w-[1200px] bg-gradient-to-br from-black/0 via-black/0 to-[#0a192f]/0">
+      <main className="pt-24 md:pt-24 px-6 md:px-16 md:ml-[45%] max-w-[1200px]">
         {/* Hero Section */}
         <motion.section
           initial="initial"
@@ -95,10 +95,16 @@ export default function Portfolio() {
         >
           <motion.h1 
             variants={fadeIn}
-            className="text-5xl md:text-7xl font-bold mb-4"
+            className="text-4xl md:text-7xl font-bold mb-4"
           >
             Data <span className="text-red-500">Developer</span>
           </motion.h1>
+          <motion.p 
+            variants={fadeIn}
+            className="md:hidden text-[#a1a1aa] text-base font-light mb-8 leading-relaxed"
+          >
+            I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
+          </motion.p>
           <motion.p 
             variants={fadeIn}
             className="text-sm md:text-base text-[#a1a1aa] max-w-2xl leading-relaxed"
