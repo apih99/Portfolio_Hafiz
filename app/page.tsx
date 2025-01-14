@@ -33,8 +33,8 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-black to-[#0a192f] text-white">
       <CursorSpotlight />
-      {/* Navigation - Header on mobile, Sidebar on desktop */}
-      <nav className="fixed top-0 w-full md:w-[45%] md:h-screen bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] z-50">
+      {/* Navigation - Static header on mobile, Fixed sidebar on desktop */}
+      <nav className="relative md:fixed md:top-0 w-full md:w-[45%] md:h-screen bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] md:z-50">
         <motion.div 
           initial={{ x: -100 }}
           animate={{ x: 0 }}
@@ -72,8 +72,8 @@ export default function Portfolio() {
               <a
                 key={i}
                 href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
-            target="_blank"
-            rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#a1a1aa] hover:text-red-500 transition-colors"
               >
                 <Icon className="h-5 w-5" />
@@ -84,14 +84,14 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-24 md:pt-24 px-6 md:px-16 md:ml-[45%] max-w-[1200px]">
+      <main className="md:ml-[45%] max-w-[1200px]">
         {/* Hero Section */}
         <motion.section
           initial="initial"
           id="about"
           animate="animate"
           variants={staggerChildren}
-          className="min-h-[50vh] flex flex-col justify-start"
+          className="px-6 md:px-16 min-h-[50vh] flex flex-col justify-start"
         >
           <motion.h1 
             variants={fadeIn}
