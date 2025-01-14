@@ -34,18 +34,18 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-br from-black via-black to-[#0a192f] text-white">
       <CursorSpotlight />
       {/* Sidebar Navigation */}
-      <nav className="fixed left-0 top-0 h-screen w-[45%] bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] pl-32 pr-16 pt-24">
+      <nav className="fixed left-0 top-0 h-screen w-full md:w-[45%] bg-gradient-to-br from-black/10 via-black/10 to-[#0a192f]/10 backdrop-blur-[2px] p-8 md:pl-32 md:pr-16 md:pt-24">
         <motion.div 
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           className="h-full flex flex-col justify-between"
         >
           <div>
-            <h2 className="text-5xl font-bold text-red-500 tracking-tight mb-4">Shahrul Hafiz</h2>
-            <p className="text-[#a1a1aa] text-lg font-light mb-16 leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold text-red-500 tracking-tight mb-4">Shahrul Hafiz</h2>
+            <p className="text-[#a1a1aa] text-base md:text-lg font-light mb-8 md:mb-16 leading-relaxed">
             I&apos;m a developer with a foot in both data science and web development. I enjoy the challenge of leveraging data for impactful solutions and creating user-friendly interfaces.
             </p>
-            <nav className="space-y-5">
+            <nav className="space-y-4 md:space-y-5">
               {navItems.map((item) => {
                 const isActive = activeSection === item.toLowerCase()
                 return (
@@ -84,7 +84,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main className="ml-[45%] pt-24 px-16 max-w-[1200px] bg-gradient-to-br from-black/0 via-black/0 to-[#0a192f]/0">
+      <main className="pt-[450px] md:pt-24 px-8 md:px-16 md:ml-[45%] max-w-[1200px] bg-gradient-to-br from-black/0 via-black/0 to-[#0a192f]/0">
         {/* Hero Section */}
         <motion.section
           initial="initial"
@@ -95,13 +95,13 @@ export default function Portfolio() {
         >
           <motion.h1 
             variants={fadeIn}
-            className="text-7xl font-bold mb-4"
+            className="text-5xl md:text-7xl font-bold mb-4"
           >
             Data <span className="text-red-500">Developer</span>
           </motion.h1>
           <motion.p 
             variants={fadeIn}
-            className="text-base text-[#a1a1aa] max-w-2xl leading-relaxed"
+            className="text-sm md:text-base text-[#a1a1aa] max-w-2xl leading-relaxed"
           >
             Hey there! 👋 I&apos;m a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I&apos;m all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I&apos;ve built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects! 💻 My go-to languages are Python, R, Java, plus web basics like HTML, CSS, and JavaScript. I&apos;m always contributing to open-source projects 🧑‍💻. I&apos;ve earned some cool awards🏅, a scholarship 💰, coding badges 🏆, and even made the Dean&apos;s List! 🤓 I&apos;m constantly learning and looking for exciting projects to jump into! Let&apos;s build something awesome! ✨
           </motion.p>
@@ -186,15 +186,15 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="py-24"
+          className="py-16 md:py-24"
         >
           <motion.h2 
             variants={fadeIn}
-            className="text-4xl font-bold mb-12"
+            className="text-3xl md:text-4xl font-bold mb-8 md:mb-12"
           >
             Featured Projects
           </motion.h2>
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {[
               {
                 title: "Url Shortener",
@@ -229,9 +229,9 @@ export default function Portfolio() {
               }
             ].map((project, index) => (
               <motion.div key={index} variants={fadeIn}>
-                <div className="group p-8 flex gap-6">
+                <div className="group p-4 md:p-8 flex flex-col md:flex-row gap-4 md:gap-6">
                   {project.image && (
-                    <div className="relative w-48 h-32 flex-shrink-0 group/image cursor-pointer">
+                    <div className="relative w-full md:w-48 h-48 md:h-32 flex-shrink-0 group/image cursor-pointer">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -243,7 +243,7 @@ export default function Portfolio() {
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <div className="space-y-5">
+                    <div className="space-y-3 md:space-y-5">
                       <div className="flex items-center gap-2">
                         <h3 className="text-lg font-semibold text-white">
                           <a 
