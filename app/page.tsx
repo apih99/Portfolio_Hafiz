@@ -140,25 +140,25 @@ export default function Portfolio() {
           <div className="space-y-12">
             {[
               {
-                title: "Data Science Intern",
+                title: "Data Science/Developer Intern (to be)",
                 company: "Maybe your company?",
                 period: "2025 — Present",
-                description: "Developed and implemented machine learning models for predictive maintenance and optimization. Collaborated with cross-functional teams to analyze large datasets and create data-driven solutions for business problems.",
-                technologies: ["Python", "TensorFlow", "Scikit-learn", "SQL", "Power BI"]
+                description: "My resume says 'student,' but my heart says 'future intern'. I'm fluent in these technologies and even better at solving problems (and maybe making coffee). Ready when you are!",
+                technologies: ["Python", "TensorFlow", "Scikit-learn", "SQL", "Power BI","NextJs","AWS","Git","Docker"]
               },
               {
                 title: "Web Development Lead",
                 company: "UPNM Volunteering Club",
-                period: "2021 — 2022",
-                description: "Led a team of student developers in creating web applications for university events and organizations. Implemented modern web development practices and mentored junior developers.",
+                period: "2022 — 2025",
+                description: "Contribute to the club as a web developer and programmer, creating and maintaining the online tools we use. This includes building and updating our website, which helps us connect with volunteers and manage our projects more effectively.",
                 technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
               },
               {
                 title: "Data Science Project",
-                company: "F1 Analytics",
-                period: "2021",
-                description: "Created a comprehensive F1 race analytics dashboard. Implemented data visualization and predictive modeling for race outcomes and strategy optimization.",
-                technologies: ["Python", "Pandas", "Plotly", "Machine Learning", "Web Scraping"]
+                company: "Hobby Project",
+                period: "2024",
+                description: "Sometimes I just need to code something, y'know? So I just pick a random idea that catches my eye and get to work. This particular venture led to some fun analysis and visualization. It's how I keep my skills sharp (and my boredom at bay).",
+                technologies: ["Python", "Pandas", "Plotly", "Machine Learning", "Web Scraping","Anything"]
               }
             ].map((job, index) => (
               <motion.div
@@ -344,7 +344,7 @@ export default function Portfolio() {
             className="max-w-2xl"
           >
             <p className="text-[#a1a1aa] text-lg mb-8 leading-relaxed">
-              I&apos;m always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+            I'm always open to new projects, opportunities, and the occasional existential crisis. If you think I can help, or just want to witness my coding genius (or maybe just average skills), drop me a line. Don't worry, I don't bite... much.
             </p>
             <a 
               href="mailto:hafizcr716@gmail.com"
