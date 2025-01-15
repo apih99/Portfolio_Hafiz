@@ -344,7 +344,7 @@ export default function Portfolio() {
             className="max-w-2xl"
           >
             <p className="text-[#a1a1aa] text-lg mb-8 leading-relaxed">
-            I'm always open to new projects, opportunities, and the occasional existential crisis. If you think I can help, or just want to witness my coding genius (or maybe just average skills), drop me a line. Don't worry, I don't bite... much.
+              I&apos;m always open to new projects, opportunities, and the occasional existential crisis. If you think I can help, or just want to witness my coding genius (or maybe just average skills), drop me a line. Don't worry, I don't bite... much.
             </p>
             <a 
               href="mailto:hafizcr716@gmail.com"
