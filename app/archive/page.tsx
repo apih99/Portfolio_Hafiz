@@ -13,7 +13,7 @@ const projects = [
   },
   {
     year: '2025',
-    title: 'PDF Editor',
+    title: 'PDF Editor Website',
     madeAt: 'Personal Project',
     builtWith: ['Python', 'Flask', 'Nginx', 'Linux'],
     link: 'https://github.com/apih99/pdf-editor'

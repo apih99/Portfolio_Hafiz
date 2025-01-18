@@ -213,7 +213,7 @@ export default function Portfolio() {
                 title: "PDF Editor",
                 description: "Okay, so I built a basic PDF compressor/merger. Why? Mostly to learn how to host a Flask app with Nginx on Linux. I use those tools a lot anyway. Website was easy (1 hour), hosting was a nightmare (11 hours ☠️).",
                 link: "https://github.com/apih99/pdf-editor",
-                image: "/pdfeditor.jpg",
+                image: "/pdfeditor.jpeg",
                 tags: ["Python", "Flask", "Nginx", "Linux"]
               },
               {
