@@ -210,11 +210,11 @@ export default function Portfolio() {
           <div className="space-y-8 md:space-y-12">
             {[
               {
-                title: "Url Shortener",
-                description: "Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.",
-                link: "https://github.com/apih99/urlShortenerRuby",
-                image: "/urlshortener.png",
-                tags: ["Ruby", "Rails", "RESTful API", "Railway"]
+                title: "PDF Editor",
+                description: "Okay, so I built a basic PDF compressor/merger. Why? Mostly to learn how to host a Flask app with Nginx on Linux. I use those tools a lot anyway. Website was easy (1 hour), hosting was a nightmare (11 hours ☠️).",
+                link: "https://github.com/apih99/pdf-editor",
+                image: "/pdfeditor.jpg",
+                tags: ["Python", "Flask", "Nginx", "Linux"]
               },
               {
                 title: "Fundraising Website",
