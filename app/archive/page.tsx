@@ -6,6 +6,13 @@ import { ArrowLeft } from 'lucide-react'
 const projects = [
   {
     year: '2025',
+    title: 'Weather Data ETL Pipeline with Real-time Dashboard',
+    madeAt: 'Personal Project',
+    builtWith: ['Python', 'PostgreSQL', 'OpenWeatherMap','Streamlit'],
+    link: 'https://github.com/apih99/weather-dashboard'
+  },
+  {
+    year: '2025',
     title: 'Fundraising Website',
     madeAt: 'UPNM   ',
     builtWith: ['Next.js', 'TypeScript', 'Tailwind CSS','ToyyibPay'],
