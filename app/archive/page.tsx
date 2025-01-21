@@ -6,6 +6,13 @@ import { ArrowLeft } from 'lucide-react'
 const projects = [
   {
     year: '2025',
+    title: 'Automated Issue Detection and Escalation System',
+    madeAt: 'Personal Project',
+    builtWith: ['Python', 'Elasticsearch', 'Slack','Jira'],
+    link: 'https://github.com/apih99/automated-issue-detection'
+  },
+  {
+    year: '2025',
     title: 'Weather Data ETL Pipeline with Real-time Dashboard',
     madeAt: 'Personal Project',
     builtWith: ['Python', 'PostgreSQL', 'OpenWeatherMap','Streamlit'],
