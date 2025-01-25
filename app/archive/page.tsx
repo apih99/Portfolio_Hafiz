@@ -6,6 +6,13 @@ import { ArrowLeft } from 'lucide-react'
 const projects = [
   {
     year: '2025',
+    title: 'AI Reader Chrome Extension',
+    madeAt: 'Personal Project',
+    builtWith: ['JavaScript', 'Chrome Extension', 'OpenAI','Gemini'],
+    link: 'https://github.com/apih99/AI-reader'
+  },
+  {
+    year: '2025',
     title: 'Automated Issue Detection and Escalation System',
     madeAt: 'Personal Project',
     builtWith: ['Python', 'Elasticsearch', 'Slack','Jira'],
