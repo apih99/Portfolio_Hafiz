@@ -47,6 +47,13 @@ const projects = [
     link: 'https://github.com/apih99/musicRecommenderBot'
   },
   {
+    year: '2025',
+    title: 'Spotify Web Client',
+    madeAt: 'Personal Project',
+    builtWith: ["React", "HTML", "CSS", "Spotify API","JavaScript"],
+    link: 'https://github.com/apih99/spotify-client-ruby'
+  },
+  {
     year: '2024',
     title: 'F1 Analytics Dashboard',
     madeAt: 'UPNM',
