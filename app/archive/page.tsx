@@ -6,6 +6,13 @@ import { ArrowLeft } from 'lucide-react'
 const projects = [
   {
     year: '2025',
+    title: 'QR Generator Web',
+    madeAt: 'Personal Project',
+    builtWith: ['Ruby on Rails', 'PostgreSQL','Git'],
+    link: 'https://github.com/apih99'
+  },
+  {
+    year: '2025',
     title: 'AI Reader Chrome Extension',
     madeAt: 'Personal Project',
     builtWith: ['JavaScript', 'Chrome Extension', 'OpenAI','Gemini'],
