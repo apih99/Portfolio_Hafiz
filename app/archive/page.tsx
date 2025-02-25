@@ -6,6 +6,13 @@ import { ArrowLeft } from 'lucide-react'
 const projects = [
   {
     year: '2025',
+    title: 'Waktu Solat Chrome Extension',
+    madeAt: 'Personal Project',
+    builtWith: ['HTML', 'CSS', 'JavaScript','API'],
+    link: 'https://github.com/apih99/waktu-solat-extension'
+  },
+  {
+    year: '2025',
     title: 'QR Generator Web',
     madeAt: 'Personal Project',
     builtWith: ['Ruby on Rails', 'PostgreSQL','Git'],
