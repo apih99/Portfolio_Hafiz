@@ -140,11 +140,11 @@ export default function Portfolio() {
           <div className="space-y-12">
             {[
               {
-                title: "Data Science/Developer Intern (to be)",
-                company: "Maybe your company?",
+                title: "Data Engineer Intern",
+                company: "Great Eastern Life Malaysia",
                 period: "2025 — Present",
-                description: "My resume says 'student,' but my heart says 'future intern'. I'm fluent in these technologies and even better at solving problems (and maybe making coffee). Ready when you are!",
-                technologies: ["Python", "TensorFlow", "Scikit-learn", "SQL", "Power BI","NextJs","AWS","Git","Docker"]
+                description: "The resume update is in: no longer just a 'student' but now a Data Engineering Intern at Great Eastern! Turning data into stories, learning something new every day, and still maintaining my problem-solving superpowers.",
+                technologies: ["Python", "Zappelin", "Hue UI", "SQL", "Selenium","Web Scraping","Data Pipeline", "ETL"]
               },
               {
                 title: "Web Development Lead",
