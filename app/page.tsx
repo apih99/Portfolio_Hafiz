@@ -83,10 +83,10 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="hidden md:flex gap-5">
-            {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
+            {[Github, Linkedin, Mail].map((Icon, i) => (
               <a
                 key={i}
-                href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "https://www.instagram.com/apih_99/", "mailto:hafizcr716@gmail.com"][i]}
+                href={["https://github.com/apih99", "https://www.linkedin.com/in/shahrulhafiz03/", "mailto:hafizcr716@gmail.com"][i]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#a1a1aa] hover:text-red-500 transition-colors"
