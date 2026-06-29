@@ -35,7 +35,7 @@ export default function Portfolio() {
       <CursorSpotlight />
       {/* Navigation - Clean header on mobile, Fixed sidebar on desktop */}
       <nav className="relative md:fixed md:top-0 w-full md:w-[45%] md:h-screen">
-        <motion.div 
+        <motion.div
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           className="px-8 pt-16 pb-8 md:p-0 md:h-full md:pl-32 md:pr-16 md:pt-24 flex flex-col md:justify-between"
@@ -108,17 +108,17 @@ export default function Portfolio() {
           variants={staggerChildren}
           className="px-8 md:px-16 pt-8 md:pt-24"
         >
-          <motion.h1 
+          <motion.h1
             variants={fadeIn}
             className="text-4xl md:text-7xl font-bold mb-4"
           >
             Data <span className="text-red-500">Developer</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             variants={fadeIn}
             className="text-[#a1a1aa] text-base md:text-lg max-w-2xl leading-relaxed"
           >
-            Hey there! 👋 I&apos;m a data science & web dev enthusiast currently studying at UPNM. I love building stuff that works well! 🚀 I&apos;m all about data, using tools like Scikit-learn, TensorFlow, and PyTorch to create cool models. 🧠 I&apos;ve built things like predictive tools for medical inventory, traffic flow predictors, F1 race dashboards 🏎️, and lots of web projects! 💻 My go-to languages are Python, R, Java, plus web basics like HTML, CSS, and JavaScript. I&apos;m always contributing to open-source projects 🧑‍💻. I&apos;ve earned some cool awards🏅, a scholarship 💰, coding badges 🏆, and even made the Dean&apos;s List! 🤓 I&apos;m constantly learning and looking for exciting projects to jump into! Let&apos;s build something awesome! ✨
+            What&apos;s up! 🚀 I&apos;m a Data Engineer specializing in Python, machine learning, and end-to-end automation. I love building robust data infrastructure that works flawlessly, from designing core database models and predictive systems to scripting advanced OCR and Selenium pipelines that smash manual work. Whether I&apos;m managing server migrations or optimizing pipelines to make complex data look clean, I&apos;m always down for high-impact projects. Let&apos;s build something cool!
           </motion.p>
         </motion.section>
 
@@ -131,7 +131,7 @@ export default function Portfolio() {
           variants={staggerChildren}
           className="px-8 md:px-16 py-16 md:py-24"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-3xl md:text-4xl font-bold mb-8 md:mb-12"
           >
@@ -140,11 +140,25 @@ export default function Portfolio() {
           <div className="space-y-12">
             {[
               {
+                title: "Data Engineer",
+                company: "Great Eastern Life Assurance Malaysia",
+                period: "2026 - Present",
+                description: "Maintained the magical pipelines that turn messy, downloaded bills into pristine data models using SQL and Apache Zeppelin, all while keeping the payments team running on pure automation.",
+                technologies: ["Python", "SQL", "Selenium", "Automation", "OCR", "Hue UI", "Data Cleaning", "Data Processing", "Reporting"]
+              },
+              {
+                title: "Analytical Engineer",
+                company: "ORTechnologies Sdn Bhd",
+                period: "2025 — 2026",
+                description: "Essentially a data translator who uses Alteryx to turn chaotic server numbers into clean visuals before anyone has a chance to ask 'what does this graph mean?'",
+                technologies: ["Alteryx", "Alteryx Server", "Data Cleaning", "Data Visualization", "Data Processing", "Reporting", "Tableau"]
+              },
+              {
                 title: "Data Engineer Intern",
-                company: "Great Eastern Life Malaysia",
+                company: "Great Eastern Life Assurance Malaysia",
                 period: "2025 — Present",
                 description: "The resume update is in: no longer just a 'student' but now a Data Engineering Intern at Great Eastern! Turning data into stories, learning something new every day, and still maintaining my problem-solving superpowers.",
-                technologies: ["Python", "Zappelin", "Hue UI", "SQL", "Selenium","Web Scraping","Data Pipeline", "ETL"]
+                technologies: ["Python", "Zappelin", "Hue UI", "SQL", "Selenium", "Web Scraping", "Data Pipeline", "ETL"]
               },
               {
                 title: "Web Development Lead",
@@ -158,7 +172,7 @@ export default function Portfolio() {
                 company: "Hobby Project",
                 period: "2024",
                 description: "Sometimes I just need to code something, y'know? So I just pick a random idea that catches my eye and get to work. This particular venture led to some fun analysis and visualization. It's how I keep my skills sharp (and my boredom at bay).",
-                technologies: ["Python", "Pandas", "Plotly", "Machine Learning", "Web Scraping","Anything"]
+                technologies: ["Python", "Pandas", "Plotly", "Machine Learning", "Web Scraping", "Anything"]
               }
             ].map((job, index) => (
               <motion.div
@@ -189,7 +203,7 @@ export default function Portfolio() {
                 </div>
               </motion.div>
             ))}
-        </div>
+          </div>
         </motion.section>
 
         {/* Projects Section */}
@@ -201,7 +215,7 @@ export default function Portfolio() {
           variants={staggerChildren}
           className="px-8 md:px-16 py-16 md:py-24"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-3xl md:text-4xl font-bold mb-8 md:mb-12"
           >
@@ -222,7 +236,7 @@ export default function Portfolio() {
                 link: "https://payung-impian.vercel.app",
                 image: "/payungimpian.png",
                 stars: 670,
-                tags: ["Next.js", "Tailwind CSS", "Typescript", "Vercel","ToyyibPay"]
+                tags: ["Next.js", "Tailwind CSS", "Typescript", "Vercel", "ToyyibPay"]
               },
               {
                 title: "Music Recommender Telegram Bot",
@@ -230,7 +244,7 @@ export default function Portfolio() {
                 link: "https://github.com/apih99/musicRecommenderBot",
                 image: "/musicrecommender.png",
                 downloads: "100k+ Installs",
-                tags: ["Python", "Spotify API", "Telegram Bot", "EC2","AWS"]
+                tags: ["Python", "Spotify API", "Telegram Bot", "EC2", "AWS"]
               },
               {
                 title: "Medicine Cost Forecasting System",
@@ -238,14 +252,14 @@ export default function Portfolio() {
                 link: "https://med-forecasting.streamlit.app/",
                 image: "/medforecasting.png",
                 stars: 7677,
-                tags: ["Python", "Streamlit", "Pandas", "Sklearn","Matplotlib","Seaborn"]
+                tags: ["Python", "Streamlit", "Pandas", "Sklearn", "Matplotlib", "Seaborn"]
               }
             ].map((project, index) => (
               <motion.div key={index} variants={fadeIn}>
                 <div className="group p-4 md:p-8 flex flex-col md:flex-row gap-4 md:gap-6">
                   {project.image && (
                     <div className="relative w-full md:w-48 h-48 md:h-32 flex-shrink-0 group/image cursor-pointer">
-          <Image
+                      <Image
                         src={project.image}
                         alt={project.title}
                         onClick={() => setSelectedImage(project.image)}
@@ -259,10 +273,10 @@ export default function Portfolio() {
                     <div className="space-y-3 md:space-y-5">
                       <div className="flex items-center gap-2">
                         <h3 className="text-lg font-semibold text-white">
-                          <a 
-                            href={project.link} 
-          target="_blank"
-          rel="noopener noreferrer"
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center gap-2 hover:text-red-500 transition-colors"
                           >
                             {project.title}
@@ -285,8 +299,8 @@ export default function Portfolio() {
                       </p>
                       <div className="flex flex-wrap gap-3">
                         {project.tags.map((tech) => (
-                          <span 
-                            key={tech} 
+                          <span
+                            key={tech}
                             className="text-white text-xs px-3 py-1 rounded-full bg-red-500/20"
                           >
                             {tech}
@@ -300,8 +314,8 @@ export default function Portfolio() {
             ))}
           </div>
           <div className="mt-12">
-            <a 
-              href="/archive" 
+            <a
+              href="/archive"
               className="inline-flex items-center gap-2 text-white hover:text-red-500 transition-colors"
             >
               View Full Project Archive
@@ -333,26 +347,26 @@ export default function Portfolio() {
           variants={staggerChildren}
           className="px-8 md:px-16 py-16 md:py-24 min-h-[70vh]"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeIn}
             className="text-4xl font-bold mb-8"
           >
             Get In Touch
           </motion.h2>
-          <motion.div 
+          <motion.div
             variants={fadeIn}
             className="max-w-2xl"
           >
             <p className="text-[#a1a1aa] text-lg mb-8 leading-relaxed">
               I&apos;m always open to new projects, opportunities, and the occasional existential crisis. If you think I can help, or just want to witness my coding genius (or maybe just average skills), drop me a line. Don&apos;t worry, I don&apos;t bite... much.
             </p>
-            <a 
+            <a
               href="mailto:hafizcr716@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-              <Button 
-                size="lg" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
                 className="bg-red-500 hover:bg-red-600 text-white border-none text-base font-medium"
               >
                 Say Hello
@@ -386,7 +400,7 @@ export default function Portfolio() {
               >
                 <X className="h-8 w-8" />
               </button>
-          <Image
+              <Image
                 src={selectedImage}
                 alt="Full size"
                 className="w-full h-auto rounded-lg shadow-2xl"
